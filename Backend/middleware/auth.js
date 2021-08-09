@@ -7,7 +7,7 @@ module.exports = (req, res, next) => {
   if (!token) {
     return res.status(401).json("token inexiste, authorization réfusé");
   } 
-  try {
+  try {  
     const decoded = jwt.verify(token, config.get("jwtSecret"));
     req.user = decoded;
     next();
