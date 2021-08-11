@@ -3,6 +3,7 @@ const { validationResult } = require("express-validator");
 
 
 module.exports={
+
 // @route    POST annonces/
 // @desc     add an ad
 // @access   Private
@@ -18,7 +19,7 @@ postProduit: async (req, res) => {
         title,
         category,
         description,
-        image,
+        image, 
         price,
         countInStock
       });
@@ -146,7 +147,9 @@ recentProduit: async (req, res) => {
       console.error(error.message);
       res.status(500).send("Server error");
     }
-  }
+  },
+  
+
 
 
   

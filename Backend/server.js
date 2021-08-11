@@ -1,5 +1,6 @@
 const express = require('express');
 const connectDB = require('./config/db');
+const  colors=require ('colors')
 const app = express();
 //connexion db
 connectDB();
@@ -9,11 +10,12 @@ app.use(express.json());
 const users=require("./routes/usersRouter")
 const produits=require("./routes/produitRouter")
 const comment=require ("./routes/commentRouter")
-//midlewares
-app.use('/api/users',users)
+const orders=require("./routes/orderRouter")
+//middlewares
+app.use('/api/users',users)  
 app.use('/api/produits',produits)
-app.use('/api/comments',comment)   
-
+app.use('/api/comments',comment)
+app.use("/api/orders",orders)
 //config server
 const port = process.env.PORT || 4000; 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+app.listen(port, () => console.log(`Server running on port ${port}`.yellow.bold));  

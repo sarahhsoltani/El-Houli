@@ -4,9 +4,9 @@ const { check } = require("express-validator");
 const Comment=require("../controllers/commentController")
 const client=require ('../middleware/client')
 const authentification =require ("../middleware/auth")
-
+ 
 //post comment
-router.post("/PostComment/:id",  [
+router.post("/postComment/:id",  [
     authentification,
     client,
     [
@@ -14,10 +14,10 @@ router.post("/PostComment/:id",  [
         .not()
         .isEmpty()
     ]
-  ],Comment.postComment)
+  ],Comment.postComment) 
 
-  //delete comment
+  //delete comment  
   
   router.delete("/deleteComment/:id/:comment_id",authentification,Comment.deleteComment)
 
-  module.exports=router 
+  module.exports=router  

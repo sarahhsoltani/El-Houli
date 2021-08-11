@@ -9,9 +9,9 @@ const connectDB = async () => {
       useUnifiedTopology: true,
       useCreateIndex: true,
       useFindAndModify: false
-    });
-
-    console.log('MongoDB is Connected...');
+    }); 
+  
+    console.log('MongoDB is Connected...'.cyan.underline);
   } catch {
     console.error(err.message);
   }

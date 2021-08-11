@@ -16,4 +16,4 @@ const CommentSchema = new Schema({
     default: Date.now
   }
 });
-module.exports = CommentSchema;
+module.exports = ("Comment", CommentSchema);

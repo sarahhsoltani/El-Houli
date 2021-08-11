@@ -5,6 +5,8 @@ const Produit=require('../controllers/prduitController')
 const vendeur =require ("../middleware/vendeur")
 const authentification =require ("../middleware/auth")
 const admin =require("../middleware/admin")
+const Comment=require("../controllers/commentController")
+const client=require ('../middleware/client')
 
 // post produit
 router.post("/newProduit",[ 
@@ -64,5 +66,7 @@ router.put("/moodifyProduct/:id",
 ],Produit.putProduit)
 //delete product    
 router.delete("/deleteProduit/:id",authentification,Produit.deleteProduit)
+
+
 
 module.exports=router     

@@ -14,8 +14,8 @@ module.exports={
     
           const newComment = {
             user: req.user._id,
-            text: req.body.text
-          };
+            text: req.body.text     
+          };    
     
           publication.Comments.unshift(newComment);
           await publication.save();
