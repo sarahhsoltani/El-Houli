@@ -2,9 +2,11 @@ const express = require('express');
 const connectDB = require('./config/db');
 const  colors=require ('colors')
 const app = express();
+const cors = require('cors')
 //connexion db
 connectDB();
 app.use(express.json());
+app.use(cors())
 
 //routers
 const users=require("./routes/usersRouter")

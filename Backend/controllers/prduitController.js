@@ -18,7 +18,7 @@ postProduit: async (req, res) => {
         user: req.user._id,
         title,
         category,
-        description,
+        description, 
         image, 
         price,
         countInStock
@@ -42,7 +42,7 @@ getProduit: async (req, res) => {
             $and: [{ category: req.query.category }]
           }).populate("user", "-password")
         : req.query.marque
-        ? await Publication.find({
+        ? await Publication.find({ 
             marque: req.query.category
           }).populate("user", "-password")
         : await Produit.find().populate("user", "-password");
@@ -61,9 +61,9 @@ getProduit: async (req, res) => {
 recentProduit: async (req, res) => {
     try {
       const publications = await Produit.find()
-        .limit(4)
-        .sort({ date: -1 });
-  
+        .limit(2)
+        .sort({ date: -1 }); 
+   
       if (!publications)
         return res.status(404).send({ msg: "There are no ads yet" });
   
@@ -81,7 +81,7 @@ recentProduit: async (req, res) => {
   
       if (!publication)
         return res
-          .status(404)
+          .status(404) 
           .send({ msg: "The ad with the given ID was not found." });
   
       return res.send(publication);

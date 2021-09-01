@@ -8,7 +8,7 @@ module.exports={
 addOrderItems : async (req, res) => {
     const {
       orderItems,
-      user
+      
     } = req.body
   
     if (orderItems && orderItems.length === 0) {
@@ -26,6 +26,29 @@ addOrderItems : async (req, res) => {
   
       res.status(201).json(createdOrder)
     }
+  },
+  // @desc    Get order by ID
+// @route   GET /api/orders/:id
+// @access  Private
+ getOrderById:async (req, res) => {
+  const order = await Order.findById(req.params.id).populate(
+    'user',
+    'name email'
+  )
+  if (order) {
+    res.json(order)
+  } else {
+    res.status(404)
+    throw new Error('Order not found')
   }
+},
+
+// @desc    Get all orders
+// @route   GET /api/orders
+// @access  Private/Admin
+ getOrders : async (req, res) => {
+  const orders = await Order.find({}).populate('user', 'id name')
+  res.json(orders)
+}
   
 }

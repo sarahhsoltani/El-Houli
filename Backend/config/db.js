@@ -8,12 +8,12 @@ const connectDB = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
-      useFindAndModify: false
+      useFindAndModify: false   
     }); 
   
-    console.log('MongoDB is Connected...'.cyan.underline);
+    console.log('MongoDB is Connected...'.cyan);
   } catch {
-    console.error(err.message);
+    console.error(err.message); 
   }
 };
 

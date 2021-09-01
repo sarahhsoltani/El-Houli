@@ -12,7 +12,7 @@ const client=require ('../middleware/client')
 router.post("/newProduit",[ 
   
     authentification,
-    vendeur,
+     vendeur,
     check("title", "please enter your pub title")
       .not()
       .isEmpty(),
@@ -20,7 +20,7 @@ router.post("/newProduit",[
       .not()
       .isEmpty(),
     check("image", "please enter your instrument image")
-      .not()
+      .not()  
       .isEmpty(),
 
     check("price", "please enter your instrument price")

@@ -5,7 +5,7 @@ const bcrypt = require("bcryptjs");
 // @desc    Auth user & get token
 // @route   POST /api/users/login
 // @access  Public
-
+   
 module.exports={ 
     registerUsers: async (req, res) => {
           try {
@@ -15,11 +15,11 @@ module.exports={
             }
             const { name, email, password, role, phone } = req.body;
             let user = await User.findOne({ email });
-      
+           
             if (user) {
               res.status(400).json({ msg: "email already exists" });
             }
-      
+            
             user = new User({
               name,
               email,
@@ -98,7 +98,30 @@ module.exports={
         } catch (error) {
           res.status(500).send("Server error");
         }
+      },
+    currentUsers:async (req, res) => {
+      try {
+        const user = await User.findOne({ _id: req.user._id }).select("-password");
+        res.json(user);
+      } catch (error) {
+        console.error(error.message);
+        res.status(500).send("Server Error");
       }
+    },
+    
+    deleteUser:async (req, res) => {
+      try {
+        const user = await User.findByIdAndDelete(req.params.id);
+        if (!user)
+          return res
+            .status(404)
+            .send({ msg: "The user with the given ID was not found." });
+    
+        res.send({ msg: "user removed" });
+      } catch (error) {
+        res.status(500).send("Server error");
+      }
+    }
 
 
 }
