@@ -41,7 +41,7 @@ module.exports={
             return res.status(404).json({ msg: "Comment does not exist" });
           }
     
-          if (
+          if (  
             comment.user.toString() !== req.user._id &&
             req.user.role !== "Admin"
           ) {
