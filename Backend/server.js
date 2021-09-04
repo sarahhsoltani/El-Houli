@@ -16,7 +16,7 @@ const orders=require("./routes/orderRouter")
 //middlewares
 app.use('/api/users',users)  
 app.use('/api/produits',produits)
-app.use('/api/comments',comment)
+app.use('/api/comments',comment)  
 app.use("/api/orders",orders)
 //config server
 const port = process.env.PORT || 4000; 

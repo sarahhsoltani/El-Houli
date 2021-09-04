@@ -9,7 +9,7 @@ const orderSchema = mongoose.Schema(
     },
     orderItems: [
       {
-        name:
+        title:
         { type: String, 
         required: true },
         qty: 
@@ -19,7 +19,7 @@ const orderSchema = mongoose.Schema(
          { type: String, 
          required: true },
         price: 
-        { type: Number,
+        { type: Number, 
         required: true }, 
 
         product: {
