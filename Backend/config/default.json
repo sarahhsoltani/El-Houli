@@ -3,4 +3,4 @@
 {
     "mongoURI": "mongodb+srv://SimplonDB:simplon@cluster0.1wkt4.mongodb.net/Elhouli?retryWrites=true&w=majority",
     "jwtSecret": "sarahsoltani"
-  } 
+  }    
