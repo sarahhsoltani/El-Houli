@@ -1,0 +1,59 @@
+.propos{
+    background-image: url("../../images/2_2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 65vh;
+}
+.item-one{
+   
+    font-size: 2rem;
+}
+.item-two{
+    font-size: 5rem;
+   
+   
+}
+.item-three{
+    font-size: 2rem;
+    font-weight: 400;
+}
+.allt{
+    background-image: url("../../images/6-1024x534.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 42vh;
+}
+.back{
+    background-image: url("../../images/5-1024x534.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 42vh;
+}
+.para {
+    font-family: "Noto Serif",serif;
+    font-size: 17px;
+    line-height: 35px;
+    color: #8f8f8f;
+    font-weight: 400;
+}
+.progress{
+    width: 55%;
+}
+
+.section-five {
+    background-image: url("../../images/1_4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 66vh;
+    background-position-y: -130px;
+}
+.stats{
+        font-weight: 600;
+}
+.input-formm{
+    width: 40% !important;
+}

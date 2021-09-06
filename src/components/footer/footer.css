@@ -1,0 +1,25 @@
+footer{
+    background-color: #eee8e3;
+}
+footer img{
+    width: 7rem;
+}
+
+footer h5{
+    font-family: "Sorts Mill Goudy";
+    font-weight: 600;
+}
+footer ul{
+    list-style-type: none;
+}
+.footer-icon{
+    background-color: #bdbdbb;
+    border-radius: 36px;
+    padding: 15px 16px 16px 21px;
+}
+.footer-title h4{
+    font-weight: 600;
+    /* padding-top: 4px; */
+    border-bottom: 2px solid;
+    width: 79px;
+}

@@ -1,0 +1,149 @@
+/* .fond{
+    background-image: url("../../images/3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 108vh;
+    margin-top: -15px;
+    
+} */
+.font{
+    width: 500px;
+    height: 500px;
+    transition: none 0s ease 0s;
+    text-align: left;
+    line-height: 0px;
+    border-width: 0px;
+    margin: 0px;
+    padding: 0px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-size: 14px;
+}
+.title-one{
+    font-size: 53px;
+    padding-top: 45px;
+    font-family: "Playfair Display";
+}
+.title-two{
+    font-size: 45px;
+    font-family: Parisienne, Sans-serif;
+}
+.list{
+    font-size: 17px;
+    font-family: "Playfair Display";
+}
+.pencil{
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+.sold{
+    font-size: 37px;
+    padding-top: 45px;
+    line-height: 51px;
+    font-family: "Playfair Display";
+}
+.acheter{
+    letter-spacing: 4px !important;
+    font-weight: 600 !important;
+}
+.sol{
+    font-family: "Playfair Display"; 
+}
+.list li {
+    list-style-type:disclosure-open;
+    line-height: 59px;
+}
+.box p{
+    font-family: "Noto Serif",serif;
+    font-size: 15px;
+    line-height: 25px;
+    color: #212525;
+    font-weight: 400;
+}
+.nouveauté p{
+    font-family: "Playfair Display";
+    font-size: 18px;
+    line-height: 33px;
+}
+.paragg{
+    font-family: "Playfair Display";
+    font-size: 16px;
+    line-height: 30px;
+}
+.coup p{
+    font-family: "Playfair Display";
+    font-size: 18px;
+    line-height: 34px;
+}
+.box-item{
+    background-image: url("../../images/shop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    background-position: center;
+}
+.box-item h3{
+    font-family: "Sorts Mill Goudy";
+}
+.photo-women{
+    background-color: #ebe2dd !important;
+}
+.section-eight h1{
+    font-size: 4.5rem;
+    line-height: 6rem;
+    font-family: "Sorts Mill Goudy";
+    margin-bottom: 2rem;
+}
+.section-eight h6{
+    font-family: "Sorts Mill Goudy";
+    font-size: 26px;
+    line-height: 40px;
+    margin-bottom: 4rem;
+}
+.match{
+    font-size: 4.5rem !important;
+}
+.section-ten{
+    background-color: #efeae0;
+}
+.collection-title{
+    font-family: "Sorts Mill Goudy";
+}
+.img-five{
+    margin-top: -4rem;
+    letter-spacing: 2px;
+}
+h1{
+    font-family: "Playfair Display";
+}
+.section-eleven{
+    background-image: url("../../images/6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 47vh;
+    font-family: "Playfair Display";
+}
+.section-eleven h6{
+    font-size: 19px;
+}
+.section-eleven input{
+    background-color: transparent;
+    width: 24rem;
+    margin-left: 20rem !important;
+    border-right: none;
+}
+.icons{
+    border-radius: 63px;
+    color: #313131;
+    border: solid 1px #313131;
+    padding: 22px 30px 10px 23px;
+    height: 5rem;
+}
+.serv{
+    font-weight: 600;
+}
+.section-twelve p{
+    font-size: 14px;
+}
