@@ -39,7 +39,9 @@ import { getRecentPubs } from '../../redux/actions/produit'
                     <div className='row'>
                         <div className="col-md-7 col-6">
                         <div className=" text-left">
-                         <h1 className="title-one">Des bijous pour tous les couts fascinaux,originals</h1>
+
+                         <h1 className="title-one">Des bijoux pour tous les couts
+                          fascinaux,originals</h1>
                          <ul className="pt-3 list">
                             <li><p>Artisanat 100% tunisien</p></li>
                             <li><p>Envoi dans les 24h</p></li>
@@ -158,8 +160,29 @@ import { getRecentPubs } from '../../redux/actions/produit'
                         <p> Découvrez nos tous derniers articles
                         Des bijoux & Accessoires <br/> originales avec des prix imbattables</p>
                     </div>
+                    
+                    <div className="d-flex flex-wrap">
+                        {
+                              product.map((el,key)=>(
+                        <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                            <div class="hovereffect" key={key}>
+                          
+                                <img className="img-responsive" variant="top"  className="w-75 h-75"  src={el.image} alt=""/>
+                                <div className="overlay">
+                                    
+                                <h2>{el.category}</h2>
+                                <a className="info" href="#">Voir détails</a>
+                                </div>
+                                <h4 className="title-col">{el.title}</h4>
+                                <h5>  {el.price}.00  د.ت</h5>
+                            </div>
+                          
+                        </div>
+                           ))
+                        }
+                      </div>
                             {/*********** Our Cards *************/}
-                        <div className="d-flex">
+                        {/* <div className="d-flex">
                         {
                               product.map((el,key)=>(
                                 <Card style={{ width: '18rem' }} key={key}>
@@ -174,7 +197,7 @@ import { getRecentPubs } from '../../redux/actions/produit'
                               </Card>
                               ))
                           }
-                        </div>
+                        </div> */}
                   {/*********** End  Section 6  **************************/}
                 </div>
                    {/*********** Start  Section 7  **************************/}

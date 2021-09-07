@@ -29,7 +29,7 @@ import Header from '../header/header'
 //                                   <Card.Title>{el.title}</Card.Title>
 //                                   <Card.Text>
 //                                     <p>{el.price}</p>
-//                                     <p>{el.description}</p>
+//                                     <p>{el.description}</p>  
 //                                     <p>{el.category}</p>
 //                                   </Card.Text>
 //                                   <Button variant="primary">Consulter</Button>

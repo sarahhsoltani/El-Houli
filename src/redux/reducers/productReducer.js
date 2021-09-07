@@ -45,7 +45,7 @@ import {
           pubs: state.pubs.filter(pub => pub._id !== payload),
           loading: false
         };
-      default:
+        default:
         return state;
     }
   };

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { getPubs } from '../../../redux/actions/produit'
+import { getPubs,deletePub } from '../../../redux/actions/produit'
 import NavbarAd from '../navbarAd/navbarAd'
 import SidebarAd from '../sideBar/sidebarAd'
 import { useDispatch, useSelector } from 'react-redux'
@@ -22,7 +22,7 @@ const ProductAd=()=> {
    },[dispatch])
    
     const deleteProduit =(id)=>{
-      dispatch(deleteProduit(id))
+      dispatch(deletePub(id))
     }
     return (
         <div>
@@ -63,7 +63,7 @@ const ProductAd=()=> {
                             <td><label >{el.description}</label></td>
                             <td><label >{el.price}</label></td>
                             <td><label >{el.countInStock}</label></td>
-                            <td><label className="badge badge-danger">supprimer</label></td>
+                            <td><button className="badge badge-danger" onClick={() => deleteProduit(el._id)}>supprimer</button></td>
                           </tr>
                         
                          

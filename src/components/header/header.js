@@ -55,7 +55,7 @@ function Header() {
                 <button className="btnn search btn-red"> <i className="fas fa-search"></i></button>
               </Form> */}
            <div className="collapse navbar-collapse" id="navbarSupportedContent">    
-              <ul className="navbar-nav ms-5 mb-2 mb-lg-0">
+              <ul className="navbar-nav  mb-2 mb-lg-0">
                   <li className="nav-item ">
                      <Link to="/" className="nav-link " aria-current="page" >Boutique</Link>
                   </li>
@@ -74,6 +74,7 @@ function Header() {
                   <li className="nav-item ">
                       <Link to="/contact" className="nav-link " aria-current="page" >Contact</Link>
                   </li>
+                 
                   {!user ? ( 
                 <li className="nav-item ">
                          
@@ -85,13 +86,14 @@ function Header() {
                    {user.role === "Vendeur" && (
             <li className="level-box nav-item nav-link d-flex ">
             <Link className="nav-item" to="/MyPublication">Mes publications</Link>
-             <button className=" connexion ms-3"><i className="fas fa-user-circle lev" onClick={logout}></i> déconnecter</button>
-  
+            <li className="nav-item ms-2 "><i class="fas fa-user-circle"></i> {user.name}</li>
+             <button className=" connexion mx-1 mb-1 "><i className="fas fa-user-circle " onClick={logout}></i> déconnecter</button>
+             
             </li>)}
                {user.role === "Client" && (
             <li className="level-box  nav-item nav-linkk d-flex ">
-            
-             <button className="connexion ms-4"><i className="fas fa-user-circle lev " onClick={logout}></i> déconnecter</button>
+             <li className="nav-link "><i class="fas fa-user-circle"></i> {user.name}</li>
+             <button className="connexion ms-4"><i className="fas fa-user-circle  " onClick={logout}></i> déconnecter</button>
   
             </li>)}
                 </div>  

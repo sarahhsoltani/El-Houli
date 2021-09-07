@@ -12,9 +12,15 @@ footer h5{
 footer ul{
     list-style-type: none;
 }
+footer ul li{
+    line-height: 34px;
+}
+.addresse {
+    line-height: 8px !important;
+}
 .footer-icon{
-    background-color: #bdbdbb;
-    border-radius: 36px;
+    border: 1px solid black;
+ 
     padding: 15px 16px 16px 21px;
 }
 .footer-title h4{
@@ -22,4 +28,17 @@ footer ul{
     /* padding-top: 4px; */
     border-bottom: 2px solid;
     width: 79px;
+}
+.input-footer{
+    background: transparent !important;
+    border: 1px solid black !important;
+    border-right: none !important;
+}
+.def{
+
+        font-size: 13px;
+        line-height: 28px;
+}
+.log-footer{
+    width: 70px;
 }

@@ -10,7 +10,7 @@ const Propos = () => {
         <div className="col-md-12 ">
             <div className="propos pt-5">
                 <h4 className="item-one ms-5 ">Nous faisons des choses avec amour</h4>
-                <h1 className="item-two ms-5 mt-5  ">Notre histoire</h1>
+                <h1 className="item-two ms-5 mt-4  ">Notre histoire</h1>
             </div>
             <div className="container">
             <h6 className="item-three mt-5">Boutique <i class="far fa-arrow-right"></i>  Historique</h6>
@@ -34,8 +34,8 @@ const Propos = () => {
             <div className="container text-center mt-5">
                 <h2> <i class="fas fa-trophy-alt"></i> Challenges Réussis</h2>
                 <div className=" mt-5 section-five ">
-                    <div className="row text-center mb-3">
-                        <div className="col-md-4 col-sm-3 col-3 ">
+                    <div className="row text-center mb-3 pt-3">
+                        <div className="col-md-4 col-sm-3 col-3  ">
                             <h1 className="stats">100%</h1>
                             <p>Clients satisfaits</p>
                         </div>
@@ -48,56 +48,55 @@ const Propos = () => {
                             <p>Commandes</p>
                         </div>
                     </div>
-                    <h3>NOS PERFORMANCES</h3>
-                    <div class="progress container mt-5">
-                    <ProgressBar variant="warning" animated now={99} label={`RÉUSITE`} />
+                    <h3 className="mt-4">NOS PERFORMANCES</h3>
+                    <div class="progress container ">
+                    <ProgressBar variant="warning" animated now={99} label={`RÉUSITE 100%`} />
                     </div>
+                    <button className="connexion mt-5">Voir nos meilleures ventes</button>
                 </div>
                 {/* ----------Start Section 5 ------------  */}
                 <h1>Ils Disent De Nous</h1>
                 <p>Des milliers de clients satisfaits chez "El Houli "</p>
                 <Carousel className="mt-5 col-md-12 ">
-     <Carousel.Item className="row">
+     <Carousel.Item className="row text-center">
         <div className="row">
                  {/* ------------Card one ------- */}
        <div className="col-md-4">
-       <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="holder.js/100px180" />
+       <Card className=" text-center">
+  <Card.Img className="revieus"  variant="top" src="/image/amin.jpg" />
   <Card.Body>
-    <Card.Title>Card Title</Card.Title>
+    <Card.Title>Mohamed Amin</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+      
+    Mon expérience avec El houli fut un vrai plaisir.                                    
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+
   </Card.Body>
 </Card>
        </div>
        {/* -------------card two ---------*/}
         <div className="col-md-4">
-        <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="holder.js/100px180" />
+        <Card className=" text-center">
+  <Card.Img className="revieus"  variant="top" src="image/user1.jpg" />
   <Card.Body>
-    <Card.Title>Card Title</Card.Title>
+    <Card.Title>Dorra Amri</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+    J'ai tant cherché quoi offrir à ma femme et j'ai trouvé mon bonheur dans ce site plein d'articles 
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+ 
   </Card.Body>
 </Card>
         </div>
        {/* -----------card three --------- */}
        <div className="col-md-4">
-       <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="holder.js/100px180" />
+       <Card className=" text-center">
+  <Card.Img className="revieus"  variant="top" src="image/mansour.jpg" />
   <Card.Body>
-    <Card.Title>Card Title</Card.Title>
+    <Card.Title>Mansour Mohamed</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+     El Houli est site très diversifiés et de très haute qualité 
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+   
   </Card.Body>
 </Card>
        </div>
@@ -108,43 +107,44 @@ const Propos = () => {
     <div className="row">
                  {/* ------------Card one ------- */}
        <div className="col-md-4">
-       <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="holder.js/100px180" />
+       <Card className=" text-center">
+  <Card.Img className="revieus"  variant="top" src="/image/sami.jpg" />
   <Card.Body>
-    <Card.Title>Card Title</Card.Title>
+    <Card.Title> Sami Mathlouthi</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+     
+    Au début j'ai surfé sur les pages de l'Artisane juste par curiosité mais 
+    après je me suis retrouvée addicted.                                     
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+  
   </Card.Body>
 </Card>
        </div>
        {/* -------------card two ---------*/}
         <div className="col-md-4">
-        <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="holder.js/100px180" />
+        <Card className=" text-center">
+  <Card.Img  className="revieus" variant="top" src="image/mahdi.jpg" />
   <Card.Body>
-    <Card.Title>Card Title</Card.Title>
+    <Card.Title>Mahdi Tlili</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+    Un service irréprochable 
+    et une rapidité exceptionnelle. Merci infiniment
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+    
   </Card.Body>
 </Card>
         </div>
        {/* -----------card three --------- */}
        <div className="col-md-4">
-       <Card style={{ width: '18rem' }}>
-  <Card.Img variant="top" src="holder.js/100px180" />
+       <Card className=" text-center">
+  <Card.Img  className="revieus" variant="top" src="/image/amin.jpg"  />
   <Card.Body>
     <Card.Title>Card Title</Card.Title>
     <Card.Text>
       Some quick example text to build on the card title and make up the bulk of
       the card's content.
     </Card.Text>
-    <Button variant="primary">Go somewhere</Button>
+    
   </Card.Body>
 </Card>
        </div>
@@ -154,10 +154,13 @@ const Propos = () => {
 
 </Carousel>
                 {/* ----------End Section 5 ------------  */}
-                <div className=" mt-5 text-center">
-                    <h5>Recevez des mises à jour par e-mail sur notre <br/>
+                <div className=" mt-5 text-center ">
+                    <h5 className="recieve">Recevez des mises à jour par e-mail sur notre <br/>
                      dernière boutique et nos offres spéciales.</h5>
-                    <Form.Control className="input-formm ms-6" type="email" placeholder="Enter email" />
+                     <form className='d-flex mb-5 mt-4'>
+                      <input   type="text" className="form-control input-propos" />
+                      <button className="connexion">S'abonner</button>
+                      </form>
                 </div>
             </div>
             <Footer/>

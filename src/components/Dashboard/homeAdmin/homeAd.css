@@ -10968,11 +10968,30 @@
   .wizard > .actions fieldset:disabled a {
     pointer-events: none;
   }
-  
+  .cardd-contact{
+    padding: 20px !important;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%) !important;
+  }
+  .titl{
+    font-weight: 600;
+    font-size: 22px;
+  }
+  .repondre{
+    border: none;
+    color: white;
+    padding: 5px 25px;
+    background: #ae8e7f;
+    border-radius: 9px;
+    font-size: 13px;
+
+  }
+  .envoie{
+    font-weight: 900;
+  }
   .btn-primary, .wizard > .actions a {
     color: #fff;
     background-color: #ae8e7f;
-    border-color: #ae8e7f
+    border-color: #ffffff
   }
   
   .btn-primary:hover, .wizard > .actions a:hover {
@@ -14155,6 +14174,8 @@
   
   .badge-danger {
     color: #fff;
+    border:none;
+    padding: 7px 17px!important;
     background-color: #FF4747;
   }
   
@@ -15625,9 +15646,17 @@
   }
   
   .bg-warning, .settings-panel .color-tiles .tiles.warning {
-    background-color: #FFC100 !important;
+    background-color: #dfc1a5 !important;
   }
-  
+
+  .bg-second{
+    border-radius: 10px;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+    font-size:19px;
+    background-color: #dcdcd8;
+  }
   a.bg-warning:hover, .settings-panel .color-tiles a.tiles.warning:hover, a.bg-warning:focus, .settings-panel .color-tiles a.tiles.warning:focus,
   button.bg-warning:hover,
   .settings-panel .color-tiles button.tiles.warning:hover,
@@ -20706,13 +20735,12 @@
   
   /* Bootstrap Progress */
   .progress {
-    border-radius: 7px;
-    height: 8px;
+    width: 50rem;
+    height: 33px;
+
   }
   
-  .progress .progress-bar {
-    border-radius: 7px;
-  }
+  
   
   .progress.progress-sm {
     height: 0.375rem;

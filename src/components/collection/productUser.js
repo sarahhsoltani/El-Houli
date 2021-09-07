@@ -65,7 +65,7 @@ import Moment from "react-moment";
         <Header/>
    
        
-       <Row md="2" xs="1" className=" box-pub">
+       <Row md="2" xs="1" className=" box-pub mt-5">
           <Col className="d-flex align-items-center">
             <img
               src={pub?.image}
@@ -78,20 +78,20 @@ import Moment from "react-moment";
             <h2 className="ad-title text-center our-pubs titl">
               {pub?.title}
             </h2>
-            <div className="marque-pub">
+            <div className="marque-pub d-flex mt-4">
               <h4 className="our-pubs"> category</h4>
               <h6 className=" secondary ml-2 mr-1">{pub?.category}</h6>
             </div>
 
             <div>
-              <h4 className="our-pubs"> Description:</h4>
+           
               <p className="desc">{pub?.description}</p>
             </div>
             <div className="marque-pub">
-              <Col className="mt-4 mb-4 d-flex justify-content-between ">
+              <Col className="mt-4 mb-4 d-flex   ">
                 <h4 className="our-pubs"> Prix:</h4>
                 <p className="prixx">
-                  {pub?.price} <sup>DT</sup>
+                  {pub?.price}.00 د.ت<sup>DT</sup>
                 </p>
               </Col>
             </div>

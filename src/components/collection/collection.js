@@ -49,25 +49,37 @@ const Collection = () => {
 </div>
                 </div>
             </div>
+            <div className="text-center my-4">
+            <h1 className="title-coll">Collection de beauté</h1>
+             <h5>Des bijoux & Accessoires originales avec des prix imbattables</h5>
+            </div>
             <div className="container text-center d-flex ms-6">
-            <Form.Control className="mt-5 input-search" type="email" placeholder="Enter email"  />
-            <i class="fal fa-search mt-5 fa-2x searchh" ></i>
+            <form className='d-flex mb-5 mt-4'>
+                      <input   type="text" className="form-control input-propos" />
+                      <button className="connexion"> <i class="fal fa-search  fa-s " ></i></button>
+                      </form>
+            
+         
             </div>
             {/*---------- cards  ---------*/}
           <div className="container">
-          <div className=" d-flex justify-content-around flex-wrap mt-5">
+            {/*  */}
+      
+{/*  */}
+          <div className=" d-flex  flex-wrap">
            {
                               pubs.map((el,key)=>(
-                                <Card style={{ width: '18rem' }} key={key}>
-                                <Card.Img variant="top"  className="w-50 h-50"  src={el.image} />
+                                <Card  key={key} className="text-center w-25" >
+                                <Card.Img variant="top"  className="w-50 h-50 ms-5"  src={el.image} />
                                 <Card.Body>
                                   <Card.Title>{el.title}</Card.Title>
                                   <Card.Text>
-                                    <p>{el.price}</p>
-                                    <p>{el.description}</p>
+                                    <p>{el.price}.00  د.ت</p>
+                                 
                                     <p>{el.category}</p>
                                   </Card.Text>
-                                 <Link to={`/produitId/${el._id}`} id={el._id}><Button variant="primary">Consulter</Button></Link> 
+                                 <Link to={`/produitId/${el._id}`} id={el._id}>
+                                   <button  className="connexion">Consulter</button></Link> 
                                 </Card.Body>
                               </Card>
                               ))

@@ -7,6 +7,7 @@
 }
 .item-one{
    
+    font-family: "Playfair Display";
     font-size: 2rem;
 }
 .item-two{
@@ -40,9 +41,15 @@
     font-weight: 400;
 }
 .progress{
-    width: 55%;
+    height: 35px;
+    width: 48rem;
 }
-
+.revieus{
+    border-radius: 176px !important;
+    width: 88px !important;
+    height: 83px !important;
+    margin-left: 113px;
+}
 .section-five {
     background-image: url("../../images/1_4.jpg");
     background-repeat: no-repeat;
@@ -55,5 +62,17 @@
         font-weight: 600;
 }
 .input-formm{
-    width: 40% !important;
+    width: 20% !important;
+}
+.input-propos{
+    background: transparent !important;
+    border: 1px solid black !important;
+    border-right: none !important;
+    width: 36rem !important;
+    margin-left: 129px;
+}
+.recieve{
+    font-family: "Playfair Display" !important;
+    font-size: 18px !important;
+    line-height: 39px !important;
 }

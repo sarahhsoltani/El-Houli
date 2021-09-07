@@ -36,10 +36,10 @@ const SidebarAd=()=> {
             </Link>
            
           </li>
-          <Link to="/dashboard/settings"  className="nav-item">
+          <Link to="/dashboard/formulaires"  className="nav-item">
             <a className="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
               <i className="icon-grid-2 menu-icon"></i>
-              <span className="menu-title"><i className="fas fa-cogs"></i> Paramétres</span>
+              <span className="menu-title"><i className="fas fa-cogs"></i> Formulaire de contact</span>
             
             </a>
             
