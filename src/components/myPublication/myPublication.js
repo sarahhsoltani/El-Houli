@@ -57,6 +57,7 @@ import {
   Button
 } from "reactstrap";
 import UpdateProduct from './updateProduct';
+import Footer from '../footer/footer';
 
 
 class MyPublication extends Component {
@@ -76,49 +77,66 @@ class MyPublication extends Component {
     ) : (
       <>
       <Header/>
-        <AddProduit/>
+     <div className=" espace">
+    <div className="container">
+    <div className="row ">
+        <div className="col-md-3">
+          <img src="/image/44.jpg" className="w-100 h-75"/>
+        </div>
+        <div className="col-md-6  mt-4 mb-5 ">
+          <h1 className="mt-5 bienvenue">Bienvenue dans votre espace {this.props.user.name}</h1>
+          <p className='mt-5'>El Houli se soucie de leurs clients et de leurs opinions. Nous estimons que El Houli a été amélioré, mais nous souhaitons également avoir de vos nouvelles. Nous voulons que vous aimiez El Houli autant que nous.</p>
+        </div>
+        <div className="col-md-3 image-2" >
+        <img src="/image/45.jpg" className="w-100 h-75"/>
+        </div>
+      </div>
+      {/* ------------------------------ blog-------------------- */}
+    
+    </div>
+     </div>
+        <div className='container'>
+       
         <Row md="4" sm="2" xs="1">
           {this.props.pubs.map(pub => (
             <Col className="mt-4" key={pub._id}>
-              <Card className="h-90 shadow-sm">
+              <Card className=" shadow-sm">
                 <CardImg
-                  top
-                  width="100%"
-                  height="50%"
+                
+              
                   src={pub.image}
                   alt="Card image cap"
                   className="border-bottom"
                 />
                 <CardBody>
-                  <CardTitle className="text-center card-title mt-3">
-                    Instrument:<span className="text-user"> {pub.title}</span>
+                  <CardTitle className="text-center card-title ">
+                    <span className="text-user"> {pub.title}</span>
                   </CardTitle>
-                  <CardSubtitle className="card-category text-left mt-3">
-                    <span className="ml-1 card-category">
-                      Marque: <span className="text-user">{pub.category}</span>
-                    </span>
+                  <CardSubtitle className="ms-4 text d-flex justify-content-between">
+                    <div className="d-flex justify-content-around text-center">
+                      <h5 className="text-user me-4 ">{pub.category}</h5>
+                      <h5 >{pub.price} د.ت</h5>
+                    </div>
+                    
                   </CardSubtitle>
 
-                  <CardText className="mt-3 mb-2 text-right text-secondary card-price">
-                    <span className="ml-1 card-category"> Prix: </span>{" "}
-                    <span className="text-user">{pub.price}</span>
-                    <sup className="ml-1 text-user">DT</sup>
+                  <CardText className="mt-3 mb-2 pub-text">
+                  <div>
+                      {pub.description}
+                    </div>
                   </CardText>
                 </CardBody>
-                <CardFooter className="d-flex justify-content-between mt-1">
-                  <Button color="light">
+                <CardFooter className="d-flex justify-content-between ">
+                  
                     {/* <i
                       className="fas fa-wrench fa-lg text-info"
                       
                     ></i> */}
                     <UpdateProduct pub={pub} id={pub._id}/>
-                  </Button>
-                  <Button
-                    color="light"
-                    onClick={() => this.props.deletePub(pub._id)}
-                  >
-                    <i className="fas fa-cut fa-lg text-danger"></i>
-                  </Button>
+                 
+                 
+                    <i className="fas fa-trash fa-lg delete " onClick={() => this.props.deletePub(pub._id)}></i>
+                 
                 </CardFooter>
               </Card>
             </Col>
@@ -128,10 +146,14 @@ class MyPublication extends Component {
             // onClick={() =>
             //   this.setState({ modal: true, isEdit: false, pub: null })
             // }
+            
           >
+             <AddProduit/>
           </Col>
         </Row>
-  
+       
+        </div>
+        <Footer/>
       </>
     );
   }

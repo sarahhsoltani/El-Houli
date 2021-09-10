@@ -3,16 +3,18 @@ import Header from '../header/header'
 import "./propos.css"
 import Footer from "../footer/footer"
 import {ProgressBar,Carousel,Button,Card,Form} from "react-bootstrap" 
+import Text from '../home/text'
 const Propos = () => {
   return(
     <div>
         <Header/>
         <div className="col-md-12 ">
             <div className="propos pt-5">
-                <h4 className="item-one ms-5 ">Nous faisons des choses avec amour</h4>
-                <h1 className="item-two ms-5 mt-4  ">Notre histoire</h1>
+              <Text className="item-two " />
+                {/* <h4 className="item-one ms-5 ">Nous faisons des choses avec amour</h4> */}
+                <h1 className="item-two ms-5 mt-4  ">Notre histoire </h1>
             </div>
-            <div className="container">
+            <div className="container text-center">
             <h6 className="item-three mt-5">Boutique <i class="far fa-arrow-right"></i>  Historique</h6>
             <div className="row mt-5">
                 <div className="col-md-3 col-sm-12 col-12 allt">
@@ -139,7 +141,7 @@ const Propos = () => {
        <Card className=" text-center">
   <Card.Img  className="revieus" variant="top" src="/image/amin.jpg"  />
   <Card.Body>
-    <Card.Title>Card Title</Card.Title>
+    <Card.Title>Nassim hlifi</Card.Title>
     <Card.Text>
       Some quick example text to build on the card title and make up the bulk of
       the card's content.

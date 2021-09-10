@@ -46,7 +46,7 @@ function Header() {
               <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
              <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="p-3">
+            <div className="p-3  me-2 ms-2">
                 <input type="text" className="fedia-search" id="inlineFormInputGroup" placeholder="Username" />
                 <button className="fedia-button-search" > <i className="fas fa-search"></i></button>
             </div>
@@ -60,17 +60,17 @@ function Header() {
                      <Link to="/" className="nav-link " aria-current="page" >Boutique</Link>
                   </li>
                   <li className="nav-item ">  
-                      <Link to="/propos" className="nav-link" >À propos</Link>
+                      <Link to="/propos" className="nav-link ms-2" >À propos</Link>
                   </li>
                   <li className="nav-item ">
-                      <Link to="/collection" className="nav-link" aria-current="page" >Collections</Link>
+                      <Link to="/collection" className="nav-link  ms-2" aria-current="page" >Collections</Link>
                   </li>
                   <li className="nav-item ">
-                      <Link to="/blog"  className="nav-link " aria-current="page" >Blog</Link>
+                      <Link to="/blog"  className="nav-link ms-2" aria-current="page" >Blog</Link>
                   </li>
-                  <li className="nav-item "> 
+                  {/* <li className="nav-item "> 
                       <Link to="/card" className="nav-link " aria-current="page" >Cart  <i className="fas fa-shopping-basket"></i></Link>
-                  </li>
+                  </li> */}
                   <li className="nav-item ">
                       <Link to="/contact" className="nav-link " aria-current="page" >Contact</Link>
                   </li>
@@ -86,15 +86,23 @@ function Header() {
                    {user.role === "Vendeur" && (
             <li className="level-box nav-item nav-link d-flex ">
             <Link className="nav-item" to="/MyPublication">Mes publications</Link>
-            <li className="nav-item ms-2 "><i class="fas fa-user-circle"></i> {user.name}</li>
+            <li className="nav-item mx-3 "><i class="fas fa-user-circle"></i> {user.name}</li>
              <button className=" connexion mx-1 mb-1 "><i className="fas fa-user-circle " onClick={logout}></i> déconnecter</button>
              
             </li>)}
                {user.role === "Client" && (
-            <li className="level-box  nav-item nav-linkk d-flex ">
+            <li className="level-box  nav-item nav-linkk mx-3 d-flex ">
              <li className="nav-link "><i class="fas fa-user-circle"></i> {user.name}</li>
              <button className="connexion ms-4"><i className="fas fa-user-circle  " onClick={logout}></i> déconnecter</button>
   
+            </li>)}
+
+            {user.role === "Admin" && (
+            <li className="level-box nav-item nav-link d-flex ">
+            <Link className="nav-item" to="/dashboard/home">Dashboard</Link>
+            <li className="nav-item mx-3 d-flex "><p className="admin"><i class="fas fa-user-circle admin"></i>  {user.role}</p></li>
+             <button className=" connexion mx-1 mb-1 "><i className="fas fa-user-circle " onClick={logout}></i> déconnecter</button>
+             
             </li>)}
                 </div>  
            

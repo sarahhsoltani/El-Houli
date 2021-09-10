@@ -4,7 +4,7 @@ import Header from '../header/header'
 import { useParams } from 'react-router-dom'
 import { useDispatch,useSelector } from 'react-redux'
 import DialogAddToCard from './DialogAddToCard';
-
+import Footer from "../footer/footer"
 import {
     Row,
     Col,
@@ -79,7 +79,7 @@ import Moment from "react-moment";
               {pub?.title}
             </h2>
             <div className="marque-pub d-flex mt-4">
-              <h4 className="our-pubs"> category</h4>
+              <h4 className="our-pubs"> category:</h4>
               <h6 className=" secondary ml-2 mr-1">{pub?.category}</h6>
             </div>
 
@@ -89,15 +89,22 @@ import Moment from "react-moment";
             </div>
             <div className="marque-pub">
               <Col className="mt-4 mb-4 d-flex   ">
-                <h4 className="our-pubs"> Prix:</h4>
-                <p className="prixx">
-                  {pub?.price}.00 د.ت<sup>DT</sup>
+               
+                <p className="prix-pubs">
+                  {pub?.price}.00 د.ت
                 </p>
               </Col>
             </div>
-            <p>{pub?.countInStock > 0 ? 'In Stock' : 'Out Of Stock'}</p>
+            <p>
+                  <span className="mr-2 font-weight-bold our-pubs">
+                    Publié par :
+                  </span>
+                  {pub?.user.name}
+                </p>
+            <div className="d-flex mt-4">
+            <p className="stock"><i class="fas fa-exclamation"></i> {pub?.countInStock > 0 ? 'En Stock' : 'Out Of Stock'}</p>
             {pub?.countInStock > 0 && (
-                  <select value={qty}
+                  <select value={qty} className="quantité ms-4"
                   onChange={(e) => setQty(e.target.value)}>
                     {/* {[...Array(pub?.countInStock).keys()].map(
                                (x) => ( */}
@@ -112,6 +119,7 @@ import Moment from "react-moment";
                  </select>
 
             )}
+            </div>
                   {/* <Row>
                           <Col>Qty</Col>
                           <Col>
@@ -130,22 +138,18 @@ import Moment from "react-moment";
                             </Form.Control>
                           </Col>
                         </Row> */}
-            {isAuthenticated && (
-              <div className="m-2 p-3 ">
+
+            {/* {isAuthenticated && ( */}
+              <div className="my-3 p-3 ">
+               <h5 className="stock font-weight-bold ">Infos Vendeur</h5>
                 <p>
-                  <span className="mr-2 font-weight-bold our-pubs">
-                    Publié par :
-                  </span>
-                  {pub?.user.name}
-                </p>
-                <p>
-                  <span className="mr-2 font-weight-bold  our-pubs">
+                  <span className="mr-2 font-weight-bold mt-5 our-pubs">
                     Adresse email :
                   </span>
                   {pub?.user.email}
                 </p>
                 <p>
-                  <span className="mr-2 font-weight-bold our-pubs">
+                  <span className="mr-2 font-weight-bold our-pubs mt-5">
                     Numéro de téléphone :
                   </span>
                   {pub?.user.phone}
@@ -154,7 +158,7 @@ import Moment from "react-moment";
               ajouter au panier
               // </button> */} 
                 {/* <Link to={`/card/${pub?._id}/qty=${qty}`} >  */}
-              <button className="btn btn-primary" 
+              <button className="ajout mt-4" 
                 //  onClick={passToCard(pub?._id,pub?.title,qty,pub?.image,pub?.price)}
                 onClick={handleClickOpen}
                   >
@@ -162,34 +166,37 @@ import Moment from "react-moment";
               {/* </Link> */}
               </div>
               
-            )}
+            {/* )} */}
             
             
           </Col> 
-        </Row>
-        <ListGroupItem>
+        </Row >
+
+            <div className="container mt-5">
+
+        <ListGroupItem  >
               <ListGroupItemHeading>
-                {/* <p className="connexion">
-                  <span className="connexion">
+                <p >
+                  <span >
                     {pub?.Comments.length}
                   </span>{" "}
                   {pub?.Comments.length === 1
                     ? "Comment"
                     : "Comments"}
-                </p> */}
+                </p>
               </ListGroupItemHeading>
             </ListGroupItem>
             {pub?.Comments.map(comment => (
-              <ListGroupItem key={comment._id}>
-                <ListGroupItemHeading className="d-flex justify-content-between">
-                  <span className="font-size-bolder">{comment.user.name}</span>{" "}
+              <ListGroupItem key={comment._id}  >
+                <ListGroupItemHeading className="d-flex justify-content-between  ">
+                  <span className=" bold"> <i class="fas fa-user"></i> {comment.user.name}</span>{" "}
                   {isAuthenticated &&
                     (user._id === comment.user._id ||
                       user.role === "Admin") && (
                       <span>
                         <button
                           type="button"
-                          class="btn btn-danger"
+                          class="supprimer"
                           onClick={() =>
                           dispatch (deleteComment(
                               pub._id,
@@ -205,7 +212,7 @@ import Moment from "react-moment";
                 <ListGroupItemText>{comment.text}</ListGroupItemText>
                 <ListGroupItemText
                   style={{ fontSize: "12px" }}
-                  className="text-right text-secondary"
+                  className="text-right publier-date"
                 >
                   Publié en:{" "}
                   <Moment
@@ -217,7 +224,7 @@ import Moment from "react-moment";
               </ListGroupItem>
               
             ))}
-            <div>
+            <div >
             {isAuthenticated &&
               user.role === "Client" ? (
                 <>
@@ -227,9 +234,9 @@ import Moment from "react-moment";
                     value={comment}
                     id="exampleText"
                     onChange={changeHandler}
-                    style={{ border: "solid 1px #EB9916" }}
+                    style={{   border: "1px solid rgb(156 151 151)" }}
                   />
-                  <Button
+                  <button
                     onClick={() => {
                       dispatch (addComment(
                         pub._id,
@@ -237,26 +244,45 @@ import Moment from "react-moment";
                       ));
                       setComment({ comment: " " });
                     }}
-                    outline    
-                    style={{ 
-                      backgroundColor: "#EB9916",
-                      border: "solid 2px #EB9916",
-                      color: "white"
-                    }}
-                    className="mt-2"
+                   
+                    className="ajout mt-4"
                   >
                     Ajouter un commentaire
-                  </Button>
+                  </button>
                 </>
               ) : (
-                <p>
-                  Connectez-vous ou inscrivez-vous pour écrire un commentaire
-                  <Link to="/login" className="connexion">
-                     Se connecter
-                  </Link>
-                </p>
-              )}
+                // <p className="mt-5">
+                //   Connectez-vous ou inscrivez-vous pour écrire un commentaire
+                //   <Link to="/login" className="text-primary ms-3">
+                //      Se connecter
+                //   </Link>
+                // </p>
+                <div>
+                    {/* {isAuthenticated && user.role === "Admin" && user.role === "Vendeur"  && (<p className="mt-5">
+                   bbbb
+                   <Link to="/login" className="text-primary ms-3">
+                    Se connecter
+                   </Link>
+                   </p>)} */}
+               
+                { (<p className="mt-5">
+               Connectez-vous ou inscrivez-vous pour écrire un commentaire
+               <Link to="/login" className="text-primary ms-3">
+                Se connecter
+               </Link>
+               </p>)}
             </div>
+              )
+
+            
+              
+              }
+            </div>
+            </div>
+
+
+
+
             {loading? <h1>Chargement en cours...</h1>:
             <DialogAddToCard
         open={open}
@@ -265,9 +291,8 @@ import Moment from "react-moment";
         qty={qty}
         />
           }
-           
+           <Footer/>
         </div>
     )
 }
 export default ProductUser
-

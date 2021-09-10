@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './footer.css'
 
 const Footer = () => {
@@ -9,17 +10,17 @@ const Footer = () => {
                 <div className="col-md-3">
                     
                     <img src="/image/el.png" alt="log" className="my-4 log-footer"/> 
-                    <p className="def">El Khomssa est une équipe passionée par la création artisanale et traditionnelle.24 Rue de Golf Megrine la Perle, Ben Arous, Tunisie TEL:(+216) 24 193 830</p>
+                    <p className="def">El Houli est une équipe passionée par la création artisanale et traditionnelle des bijoux situé à 24 Rue de Golf Megrine la Perle, Ben Arous, Tunisie TEL:(+216) 24 193 830</p>
                 </div>
                 <div className="col-md-3">
                     <h4>Informations</h4>
                     <ul>
-                        <li>Acceuil</li>
-                        <li>À propos </li>
-                        <li>Collections</li>
-                        <li>Blog</li>
-                        <li>Cart</li>
-                        <li>Contact</li>
+                        <Link to="/"><li>Acceuil</li></Link>
+                        <Link to="/propos"><li>À propos </li></Link>
+                        <Link to="/collection"><li>Collections</li></Link>
+                        <Link to="/blog"><li>Blog</li></Link>
+                        <Link to="/contact"> <li>Contact</li></Link>
+                       
                        
                     </ul>
                 </div>

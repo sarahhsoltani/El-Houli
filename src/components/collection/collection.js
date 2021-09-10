@@ -1,4 +1,4 @@
-import React ,{useEffect}from 'react'
+import React ,{useEffect,useState}from 'react'
 import Header from '../header/header'
 import "./collection.css"
 import { getPubs } from '../../redux/actions/produit'
@@ -9,7 +9,46 @@ import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 const Collection = () => {
   const dispatch = useDispatch()
+  const [pubSearch, setPubSearch] = useState("")
   const pubs = useSelector((state) => state.productReducer.pubs)
+  const [category,setCategory]=useState("")
+
+  const cat=["tous","Bagues","Colliers","Bracelets","Boucles","Manchettes"]
+  const handlProduct=(e)=>{
+    setPubSearch(
+      e.target.value
+    )
+    console.log(`pubSearch`, pubSearch)
+  }
+
+  const searchByCategory = e => {
+    setCategory(
+    
+     e.target.value
+    );   
+    console.log(`category`, category)
+  };
+
+  const filterPubs=
+  pubs.filter(el=>
+    el.title.toLowerCase().includes(pubSearch.toLowerCase())
+    ) 
+      
+  const filterByCategory=
+   pubs.filter(el=>category === "tous"? el :
+   el.category.toLowerCase().includes(category.toLowerCase())
+ 
+   )
+
+   const pubsFiltred = 
+   filterPubs ? filterPubs : filterByCategory? filterByCategory
+   :pubs 
+  // const filterPub=
+  // pubSearch  && pubs.filter(el=>
+  //  el.name.toLowerCase().includes(search.toLowerCase())
+   
+   
+  //  ) 
   useEffect(() => {
     dispatch(getPubs())
        }, [dispatch])
@@ -54,10 +93,19 @@ const Collection = () => {
              <h5>Des bijoux & Accessoires originales avec des prix imbattables</h5>
             </div>
             <div className="container text-center d-flex ms-6">
-            <form className='d-flex mb-5 mt-4'>
-                      <input   type="text" className="form-control input-propos" />
-                      <button className="connexion"> <i class="fal fa-search  fa-s " ></i></button>
+          <form className='d-flex mb-5 mt-4'>
+              <input   type="text" className="form-control input-propos" value={pubSearch} onChange={handlProduct}/>
+             <button className="connexion"> Chercher</button>
                       </form>
+             {/* <select value={category} onChange={searchByCategory}>
+                 {
+                   cat.map((el,key)=>(
+                      
+                        <option >{el}</option>
+                     
+                   ))
+                 }
+                    </select> */}
             
          
             </div>
@@ -68,7 +116,7 @@ const Collection = () => {
 {/*  */}
           <div className=" d-flex  flex-wrap">
            {
-                              pubs.map((el,key)=>(
+                           pubsFiltred  .map((el,key)=>(
                                 <Card  key={key} className="text-center w-25" >
                                 <Card.Img variant="top"  className="w-50 h-50 ms-5"  src={el.image} />
                                 <Card.Body>

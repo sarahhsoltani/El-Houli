@@ -23,6 +23,8 @@ export const UPDATE_PRODUCT = "UPDATE_PRODUCT";
 export const DELETE_PRODUCT = "DELETE_PRODUCT";
 // -------------  ACTION ORDERS--------------
  export const CART_ADD_PRODUCT = 'CART_ADD_PRODUCT' 
+ export const GET_ORDERS = 'GET_ORDERS'
+ export const DELETE_ORDER = 'DELETE_ORDER'
  export const GET_ORDER_BY_ID = 'GET_ORDER_BY_ID' 
  //----------------------------------------------
 export const GET_CONTACT = "GET_CONTACT";

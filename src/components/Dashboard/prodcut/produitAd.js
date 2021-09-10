@@ -47,7 +47,7 @@ const ProductAd=()=> {
                           <th>Publier par</th>
                           <th>image</th>
                           <th>categories</th>
-                          <th>description</th>
+                          {/* <th>description</th> */}
                           <th>price</th>
                           <th>countInStock</th>
                           <th>Actions</th>
@@ -60,7 +60,7 @@ const ProductAd=()=> {
                             <td>{el.user.name}</td>
                             <td><img src={el.image}/></td>
                             <td > {el.category}<i className="ti-arrow-down"></i></td>
-                            <td><label >{el.description}</label></td>
+                            {/* <td><label >{el.description}</label></td> */}
                             <td><label >{el.price}</label></td>
                             <td><label >{el.countInStock}</label></td>
                             <td><button className="badge badge-danger" onClick={() => deleteProduit(el._id)}>supprimer</button></td>

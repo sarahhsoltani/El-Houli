@@ -181,10 +181,10 @@ const validateEmail = () => {
     <div className="container-fluid page-body-wrapper full-page-wrapper">
       <div className="content-wrapper d-flex align-items-center auth px-0">
         <div className="row w-100 mx-0">
-          <div className="col-lg-4 mx-auto">
+          <div className="col-lg-6 mx-auto">
             <div className="auth-form-light text-left py-3 px-4 px-sm-5 text-center">
               <div className="brand-logo">
-              <img src="/image/logBrand.png" className="logoAd" alt="logo"/>
+              <img src="/image/myLog.png" className="logoAd" alt="logo"/>
               </div>
               <h4 className="cmp">Créez Votre Compte</h4>
               <h6 className="font-weight-light offre">Profitez d'offres exceptionnelles en rejoignant la famille d'El Houli</h6>

@@ -4,6 +4,7 @@ import Header from '../header/header'
 import "./home.css"
 import { useDispatch, useSelector } from 'react-redux'
 import {Card,Button} from "react-bootstrap"
+import { Link } from 'react-router-dom'
 import { getRecentPubs } from '../../redux/actions/produit'
  function Home() {
     const product = useSelector((state) => state.productReducer.pubs)
@@ -48,7 +49,7 @@ import { getRecentPubs } from '../../redux/actions/produit'
                             <li><p>Produits de trés haute qualité</p></li>
                             <li><p>Suivi rapproché de nos clients</p></li>
                          </ul>
-                         <button className=" connexion mt-3">Profiter & découvrir</button>
+                        <Link to="/collection"><button className=" connexion mt-3">Profiter & découvrir</button></Link> 
                       </div>
                         </div>
                         <div className="col-md-5 col-6 ">
@@ -57,6 +58,43 @@ import { getRecentPubs } from '../../redux/actions/produit'
                     </div>
                 </div>
                {/*********** Start Section 3 menu  ********/}
+
+                    
+                <div className="col-md-12 mt-5  text-center">
+                    <h1 className="mb-5">Collections</h1>
+                <div className="row">
+                    <div className="col-md-4">
+                    <div >
+                        <div class="hovereffect">
+                            <img class="img-responsive w-100" src="https://habiba.jewelry/wp-content/uploads/2021/05/Etoile-de-mer--1529x1536.png" alt=""/>
+                            <h2>Signature</h2>
+                          
+                        </div>
+                    </div>
+                    </div>
+                    <div className="col-md-4">
+                    <div>
+                        <div class="hovereffect">
+                            <img class="img-responsive  w-100" src="https://habiba.jewelry/wp-content/uploads/2021/05/Dahlia-1-1528x1536.png" alt=""/>
+                            <h2>Cocktails</h2>
+                           
+                        </div>
+                    </div>
+                    </div>
+                    <div className="col-md-4">
+                    <div >
+                        <div class="hovereffect">
+                            <img class="img-responsive  w-100" src="https://habiba.jewelry/wp-content/uploads/2021/05/Agate-1529x1536.png" alt=""/>
+                            <h2>Artisanats du monde</h2>
+                            
+                        </div>
+                    </div>
+                    </div>
+                </div>
+               </div> 
+
+
+               
                {/***********Start Section 4  **************************/}
                <div className="container ">
                   <div className="col-md-12 mt-4 sol">
@@ -74,7 +112,7 @@ import { getRecentPubs } from '../../redux/actions/produit'
                        <div className="col-md-4 col-sm-12 col-12 box">
                            <div className="mt-5">
                               <div className="d-flex" >
-                                  <h5 className="pencil" >DESIGN SKETCHES</h5>
+                                  <h5 className="pencil" > PROMOTIONS</h5>
                                   <i  className="fas fa-pencil-alt ms-5 fa-2x "></i>
                               </div>
                               <div>
@@ -85,7 +123,7 @@ import { getRecentPubs } from '../../redux/actions/produit'
                            {/* ---------2----------- */}
                            <div className=" mt-4">
                               <div className="d-flex">
-                                  <h5 className="pencil">DESIGN SKETCHES</h5>
+                                  <h5 className="pencil">CADEAUX</h5>
                                   <i className="fab fa-buffer ms-5  fa-2x"></i>
                               </div>
                               <div>
@@ -96,7 +134,7 @@ import { getRecentPubs } from '../../redux/actions/produit'
                            {/* --------------3--------- */}
                            <div className=" mt-4">
                               <div className="d-flex">
-                                  <h5 className="pencil">DESIGN SKETCHES</h5>
+                                  <h5 className="pencil">DESIGN </h5>
                                   <i className="far fa-box-full ms-5  fa-2x"></i>
                               </div>
                               <div>
@@ -125,7 +163,7 @@ import { getRecentPubs } from '../../redux/actions/produit'
                            <div className=" mt-4">
                            <div className="d-flex">
                            <i className="far fa-gem fa-2x me-4 "></i>
-                              <h5 className="pencil">DESIGN SKETCHES</h5>
+                              <h5 className="pencil">UNE PENSÉE</h5>
                              
                               
                               </div>
@@ -139,7 +177,7 @@ import { getRecentPubs } from '../../redux/actions/produit'
                            <div className=" mt-4">
                               <div className="d-flex">
                               <i class="fas fa-heart me-4 fa-2x"></i>
-                              <h5 className="pencil">DESIGN SKETCHES</h5>
+                              <h5 className="pencil"> INTELLECTUELLE</h5>
                              
                               
                              
@@ -171,7 +209,7 @@ import { getRecentPubs } from '../../redux/actions/produit'
                                 <div className="overlay">
                                     
                                 <h2>{el.category}</h2>
-                                <a className="info" href="#">Voir détails</a>
+                                <Link to={`/produitId/${el._id}`} className="info" >Voir détails</Link>
                                 </div>
                                 <h4 className="title-col">{el.title}</h4>
                                 <h5>  {el.price}.00  د.ت</h5>

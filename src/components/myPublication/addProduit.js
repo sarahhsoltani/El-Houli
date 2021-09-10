@@ -51,7 +51,7 @@ const AddProduit=()=> {
   
         <Modal show={show} onHide={handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Ajout Nouveau Produit</Modal.Title>
+            <Modal.Title>Ajout Nouveau Produit <i class="fas fa-plus-circle"></i></Modal.Title>
           </Modal.Header>
           <Modal.Body>
               <form>
@@ -63,14 +63,14 @@ const AddProduit=()=> {
                   className="form-control form-control-lg" id="exampleInputPassword1" placeholder="enter le tiltre"/>
                 </div>
                 <div className="form-group">
-                <label class="form-check-label text-muted">categories produit</label>
+                <label class="form-check-label text-muted">Categories produit</label>
                   <input  type="text" name="nom"  placeholder="Enter nom" 
                   onChange={(e) => setCategory(e.target.value) }
                   
                   className="form-control form-control-lg" id="exampleInputPassword2" placeholder="entrer l'image de produit"/>
                 </div>
                 <div className="form-group">
-                <label class="form-check-label text-muted">descriptions produit</label>
+                <label class="form-check-label text-muted">Descriptions produit</label>
                   <input  type="text" name="description"  placeholder="Enter categories" 
                    onChange={(e) => setDescription(e.target.value) }
                    
@@ -78,21 +78,21 @@ const AddProduit=()=> {
                   className="form-control form-control-lg" id="exampleInputPassword3" />
                 </div>
                 <div className="form-group">
-                <label class="form-check-label text-muted">image produit</label>
+                <label class="form-check-label text-muted">Image produit</label>
                   <input  type="text" name="image"  placeholder="Enter la image" 
                    onChange={(e) => setImage(e.target.value) }
                    
                   className="form-control form-control-lg" id="exampleInputPassword4" />
                 </div>
                 <div className="form-group">
-                <label class="form-check-label text-muted">prix produit</label>
+                <label class="form-check-label text-muted">Prix produit</label>
                   <input  type="text" name="price"  placeholder="Enter le prix" 
                    onChange={(e) => setPrice(e.target.value) }
                   
                   className="form-control form-control-lg" id="exampleInputPassword5" />
                 </div>
                 <div className="form-group">
-                <label class="form-check-label text-muted">countInStock produit</label>
+                <label class="form-check-label text-muted">CountInStock produit</label>
                   <input  type="text" name="countInStock"  placeholder="Enter le countInStock" 
                     onChange={(e) => setCountInStock(e.target.value) }
                 

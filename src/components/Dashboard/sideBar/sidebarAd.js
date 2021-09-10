@@ -39,7 +39,7 @@ const SidebarAd=()=> {
           <Link to="/dashboard/formulaires"  className="nav-item">
             <a className="nav-link" data-toggle="collapse" href="#tables" aria-expanded="false" aria-controls="tables">
               <i className="icon-grid-2 menu-icon"></i>
-              <span className="menu-title"><i className="fas fa-cogs"></i> Formulaire de contact</span>
+              <span className="menu-title"><i class="fas fa-comment-dots"></i> Messages</span>
             
             </a>
             

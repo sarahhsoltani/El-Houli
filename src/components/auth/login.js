@@ -99,7 +99,7 @@ conserver plusieurs adresses, suivre les commandes et plus encore.</p>
           <div className="col-lg-4 mx-auto">
             <div className="auth-form-light text-left py-5 px-4 px-sm-5 text-center">
               <div className="brand-logo">
-                <img src="/image/newLog.png"  className="logoAd" alt="logo"/>
+                <img src="/image/myLog.png"  className="logoAd" alt="logo"/>
               </div>
               <h4 className="cpt">Connectez-Vous À Votre Compte</h4>
               <AlertMsg/>

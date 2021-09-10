@@ -38,7 +38,7 @@ const UpdateProduct=({pub,id})=> {
         <div>
              <>
        
-        <i className="fas fa-wrench fa-lg text-info " onClick={handleShow}></i> 
+        <i className="fas fa-edit warning " onClick={handleShow}></i> 
        
         
         <Modal show={show} onHide={handleClose}>

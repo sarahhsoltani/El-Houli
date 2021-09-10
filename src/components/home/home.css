@@ -163,6 +163,37 @@ h1{
   .title-col{
     font-weight: 600;
   }
+  .admin{
+      color: black !important;
+  }
+  .bienvenue{
+    font-size: 43px;
+    font-weight: 500;
+  }
+  .delete{
+    color: #a77979;
+  }
+  .warning{
+    color: #bba42c;
+  }
+  .pub-text{
+    font-size: 13px !important; 
+  }
+  .text{
+    font-size: 20px;
+    color: #7d7a7a
+  }
+  .espace p {
+    font-size: 14px;
+    line-height: 42px;
+  }
+  .espace{
+    height: 32rem;
+    background-color: #f5f4f2;
+    }
+    .image-2{
+        margin-top: 100px;
+    }
   .hovereffect .overlay {
     width: 100%;
     height: 100%;
@@ -241,4 +272,58 @@ h1{
     -webkit-transition-delay: .2s;
     transition-delay: .2s;
   }
+  /* -------------------------- */
+  /* ---------------------------- */
+  .hovereffect {
+    width: 100%;
+    height: 100%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+  }
+  
+  .hovereffect .overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color: rgba(75,75,75,0.7);
+    -webkit-transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.81);
+    transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.81);
+  }
+  
+  .hovereffect:hover .overlay {
+    background-color: rgba(89, 94, 94, 0.4);
+  }
+  
+  .hovereffect img {
+    display: block;
+    position: relative;
+  }
+  
+  .hovereffect h3 {
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    -webkit-transform: translateY(45px);
+    -ms-transform: translateY(45px);
+    transform: translateY(45px);
+    -webkit-transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.81);
+    transition: all 0.4s  cubic-bezier(0.88,-0.99, 0, 1.81);
+  }
+  
+  .hovereffect:hover h3 {
+    -webkit-transform: translateY(5px);
+    -ms-transform: translateY(5px);
+    transform: translateY(5px);
+  }
+
   

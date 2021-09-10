@@ -11,13 +11,14 @@
     font-size: 2rem;
 }
 .item-two{
-    font-size: 5rem;
-   
+    font-size: 37px !important;
+   font-weight: 700;
    
 }
 .item-three{
-    font-size: 2rem;
-    font-weight: 400;
+   
+    font-size: 42px;
+    font-weight: 800;
 }
 .allt{
     background-image: url("../../images/6-1024x534.jpg");

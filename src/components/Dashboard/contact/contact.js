@@ -25,8 +25,9 @@ export default function ContactAd() {
                 <div className="col-md-2 mt-5">
                     <SidebarAd/>
                 </div>
+                
                 <div className="col-md-10 d-flex justify-content-around   flex-wrap mt-5">
-    
+                
                    {/* {contact.map((el,key)=>(
                          
                          <div className="card text-white bg-light contact-card col-md-7 mb-3 mt-5" key={key._id}>
@@ -52,8 +53,8 @@ export default function ContactAd() {
                         <p>{el.message}</p>
                         <div className="d-flex my-2"><h5 className="envoie ">Envoyé le:</h5> <Moment format="YYYY/MM/DD HH:mm">{el.date}</Moment> </div>
                        <div className="d-flex justify-content-around">
-                       <button className="repondre  ">Répondre</button>
-                       <button className="badge badge-danger" onClick={() => deleteMessage(el._id)}>supprimer</button>
+                       <button className="ajout  ">Répondre</button>
+                       <button className="supprimer" onClick={() => deleteMessage(el._id)}>supprimer</button>
                        </div>
                      </div>
                

@@ -8700,10 +8700,11 @@
     
   }
   .nombre{
-    background-color: black;
-    width: 29px;
+    width: 70px;
     padding: 7px 23px 7px 9px;
     border-radius: 15px;
+    color: black;
+    font-weight: 900;
   }
   a:not([href]):not([class]) {
     color: inherit;
@@ -10972,6 +10973,27 @@
     padding: 20px !important;
     box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%) !important;
   }
+  .our-pubs{
+    font-weight: 600
+  }
+  .ajout{
+    background: #ae8e7f;
+    letter-spacing: 1px !important;
+    /* font-weight: 600 !important; */
+    padding: 8px 23px;
+    color: white;
+    font-weight: 500;
+    border: none;
+  }
+.stock{
+  background: #211b1b;
+  width: 144px;
+  padding: 4px 16px;
+  color: white;
+}
+.quantité{
+  padding: 4px 51px;
+}
   .titl{
     font-weight: 600;
     font-size: 22px;
@@ -21957,19 +21979,25 @@
     background: darkgrey;
    
   }
-  
+  .desc{
+    font-size: 14px;
+  }
+  .prix-pubs{
+    font-size: 23px;
+    color: #9a6b49;
+  }
   .card.card-tale:hover {
-    background: #96b2fb;
+    background: darkgrey;
   }
   
   .card.card-dark-blue {
        
-        background: #ebe2dd;
+        background: #e4d3c9;
     color: #ffffff;
   }
   
   .card.card-dark-blue:hover {
-    background: #ebe2dd;
+    background: #e4d3c9;
   
   }
   
@@ -21983,13 +22011,13 @@
   }
   
   .card.card-light-danger {
-    background: #E4E5EE;
+    background: #a6a8b9;
     color: #ffffff;
   }
   
   .card.card-light-danger:hover {
     
-    background: #E4E5EE;
+    background: #a6a8b9;
   }
   
   .card-inverse-primary {
@@ -30461,15 +30489,69 @@
   .fedia-search:focus{
     border-bottom: 1px solid #af8f80;
   }
+  .publier-date{
+  color:#60794a;
+  font-size: 16px !important;
+  }
   .connexion{
     background: #ae8e7f;
     letter-spacing: 1px !important;
-    font-weight: 600 !important;
+  
       padding: 8px 23px;
       color: white;
       font-weight: 500;
       border:none;
   }
+  .panier{
+    border-radius: 5px !important;
+    background: #866a59 !important;
+    padding: 8px 10px !important;
+    color: white !important;
+  }
+  .quitter{
+    background: gray !important;
+    color: white !important;
+  }
+  .bold{
+    font-weight: 700;
+  }
+ 
+  .valider{
+   
+    background:  #629649;
+    letter-spacing: 1px !important;
+    padding: 8px 10px;
+      color: white;
+      font-weight: 500;
+      border:none;
+ 
+}     
+  .supprimer{
+   
+      background: #ce4a4a;
+      letter-spacing: 1px !important;
+    
+        padding: 8px 23px;
+        color: white;
+        font-weight: 500;
+        border:none;
+   
+  }
+ #text{
+  font-size: 5rem !important;
+  font-size: 27px !important;
+  font-weight: 700;
+ }
+  .supprimé{
+   
+    background: #ce4a4a;
+    letter-spacing: 1px !important;
+    padding: 4px 5px;
+      color: white;
+      font-weight: 500;
+      border:none;
+ 
+}
   .fedia-button-search{
     border: none;
     border-bottom: 1px solid  #af8f80;
